@@ -585,6 +585,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed80a7540bdca4744b1e3ec1a29779ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minOffset: {x: -1000, y: 3.3, z: 0.1}
-  maxOffset: {x: -2.2, y: 1000, z: 1000}
   zoomMultiplier: 2
+  rotationMultiplier: 5
