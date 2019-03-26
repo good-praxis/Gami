@@ -5,12 +5,13 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Vector3 mousePos;
-    float moveSpeed = 3f;
-    // STILL UNUSED float turnSpeed = 50f;
+    public float moveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        //Reset Player Position
         transform.SetPositionAndRotation(new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 1));
     }
 
@@ -19,27 +20,20 @@ public class Movement : MonoBehaviour
     void Update()
     {
         WASD();
-        LookAtMouse();
     }
 
     void WASD()
     {
+
         float forwardMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         float sideMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
-        transform.Translate(Vector3.forward * forwardMovement);
-        transform.Translate(Vector3.right * sideMovement);
+        //ClampMagnitude limits the total movement speed to moveSpeed.
+
+        transform.Translate(Vector3.ClampMagnitude(Vector3.forward, moveSpeed) * forwardMovement);
+        transform.Translate(Vector3.ClampMagnitude(Vector3.right, moveSpeed) * sideMovement);
+
 
     }
 
-    void LookAtMouse()
-    {
-
-        mousePos = GameObject.FindGameObjectWithTag("Mouse Position").transform.position;
-
-
-        Quaternion rotation = Quaternion.LookRotation(mousePos);
-
-        transform.rotation = rotation;
-    }
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2019-03-26T14:44:47.852+01:00
-  initializedAtString: 2019-03-26T00:47:56.767+01:00
+  lastUpdatedAtString: 2019-03-26T19:20:12.892+01:00
+  initializedAtString: 2019-03-26T19:19:04.816+01:00
   currentGitRemote:
     name: origin
     url: https://github.com/good-praxis/Gami.git

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Green circle that indicates where (relative to the ground) the mouse is pointing.
+
 public class MouseIndicator : MonoBehaviour
 {
     Camera cam;
@@ -16,6 +18,10 @@ public class MouseIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //Shoots a ray from the camera and reports the first thing it hits.
+        //Can be set to ignore everything except the ground.
+
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 

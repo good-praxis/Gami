@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2019-03-26T14:44:47.781+01:00
-  initializedAtString: 2019-03-26T05:02:55.600+01:00
+  lastUpdatedAtString: 2019-03-26T19:20:12.884+01:00
+  initializedAtString: 2019-03-26T19:20:11.042+01:00
   localBranches:
   - name: master
     tracking: origin/master
   - name: network_client
     tracking: origin/network_client
   remoteBranches:
+  - name: origin/camera_movement
+    tracking: '[None]'
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/map
     tracking: '[None]'
   - name: origin/master
     tracking: '[None]'
@@ -55,12 +59,24 @@ MonoBehaviour:
     - origin
     subKeys:
     - Values:
+      - camera_movement
       - HEAD
+      - map
       - master
       - network_client
     subKeyValues:
     - Values:
+      - name: camera_movement
+        remote:
+          name: origin
+          url: https://github.com/good-praxis/Gami.git
+        trackingBranch: 
       - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/good-praxis/Gami.git
+        trackingBranch: 
+      - name: map
         remote:
           name: origin
           url: https://github.com/good-praxis/Gami.git

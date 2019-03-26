@@ -22,6 +22,8 @@ public class PlayerFollower : MonoBehaviour
 
         camPos = playerPos + camOffset;
 
+        Debug.Log("Cam: " + camPos);
+
         transform.SetPositionAndRotation(camPos, transform.rotation);
     }
 }
