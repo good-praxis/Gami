@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class CustomNetworkManager : MonoBehaviour {
 
+    Vector3 playerPos;
+    Quaternion playerRot;
+
     private BinaryReader reader;
     private BinaryWriter writer;
 
@@ -24,8 +27,14 @@ public class CustomNetworkManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        var playerPos = GameObject.FindGameObjectWithTag("Player").
-            transform.position.normalized;
-        Debug.Log(playerPos);
+        playerPos = GameObject.FindGameObjectWithTag("Player").
+            transform.position;
+        playerRot = GameObject.FindGameObjectWithTag("Player").transform.rotation;
+
+        //Debug.Log("X: " + playerPos.x + " Z: " + playerPos.z + " Rot: " + playerRot);
+
+        //writer.Write(playerPos.x);
+        //writer.Write(playerPos.y);
+        //writer.Write(playerRot);
     }
 }
